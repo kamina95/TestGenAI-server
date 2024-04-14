@@ -127,8 +127,12 @@ def run_assistant(thread_id, assistant_name):
 
 # method to extract the code from the message between the tags '''java and '''
 def extract_code(message):
-    code = message.split("'''java")[1].split("'''")[0]
-    return code
+    if "'''java" in message:
+        code = message.split("'''java")[1].split("'''")[0]
+        return code
+    return message
+    # code = message.split("'''java")[1].split("'''")[0]
+    # return code
 
 # new_message = generate_response(code_msg, assistant_name)
 # new_message = generate_response("gello", "FirstAssistant")

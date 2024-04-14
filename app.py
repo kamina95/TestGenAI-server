@@ -39,7 +39,7 @@ def generate_llama_response_call():
 
 
 @app.route('/generate_llama_error_response', methods=['POST'])
-def generate_llama_error_response():
+def generate_llama_error_call():
     data = request.json
     prompt = data['code_msg']
     print(prompt)
