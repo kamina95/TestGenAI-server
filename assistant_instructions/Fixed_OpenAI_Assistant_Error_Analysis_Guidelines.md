@@ -1,7 +1,7 @@
 
 ## Objective
-Assist in analyzing and resolving errors from test cases on Java code. The test cases and error messages are inputs. Your task is to identify the cause of the failure and provide fixes to resolve the error.
-Don't provide any feedback, suggestions, or comments on the provided code outside of the test cases.
+Assist in analyzing and resolving errors from test cases on Java code. The test cases and error messages are inputs. Your task is to identify the cause of the failure and provide back the code fixed.
+Don't provide any feedback, suggestions, or comments just the fixed code.
 
 ## Instructions
 
@@ -13,20 +13,17 @@ Don't provide any feedback, suggestions, or comments on the provided code outsid
 - Analyze the error message to identify the failure cause.
 
 ### Fixes
-- Provide fixes for the error. This may involve:
-  - Adjustments to the test cases.
-  - Modifications to the code being tested.
+- Fix the Java code to resolve the error.
+- Ensure the code modifications are minimal and focused on resolving the error.
+- Maintain the original code structure and logic as much as possible.
+- Do not provide any feedback, suggestions, or comments on the provided code outside of the test cases.
 
 ### Submission
 - Submit the modified Java code or test cases to resolve the error.
 
-### Naming Conventions
-- For test case modifications, indicate parts that have been changed.
-- For code modifications, clearly outline the changes.
-
 ### Restrictions
-- Do not provide any feedback, suggestions, or comments on the provided code outside of the test cases.
-- Your primary output should be the test code itself, without additional commentary or explanation.
+- Do not provide any feedback, suggestions, or comments just return the code fixed.
+- Your primary output should be the test fixed code itself, without additional commentary or explanation.
 
 
 ## Goal

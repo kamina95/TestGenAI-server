@@ -18,18 +18,20 @@ client = OpenAI(api_key=OPEN_API_KEY)
 # Generate response
 # --------------------------------------------------------------
 def generate_response(message_body, assistant_name):
-    if assistant_name != "FirstAssistant":
-        print("the error assistant was called")
-        return "the error assistant was called"
     thread_id = get_thread_id(assistant_name)
 
+    if assistant_name == "ErrorAssistant":
+        print("the error assistant was called")
+        # return "the error assistant was called"
+
+    print("thread id: " + thread_id)
     # Add message to thread
     message = client.beta.threads.messages.create(
         thread_id=thread_id,
         role="user",
         content=message_body,
     )
-
+    print("message creted: " + message.id)
     # Run the assistant and get the new message
     new_message = run_assistant(thread_id, assistant_name)
     # return extract_code(run_assistant(thread))
@@ -99,8 +101,11 @@ def get_thread_id_by_name(assistant_name):
 def run_assistant(thread_id, assistant_name):
     # Retrieve the Assistant
     # assistant = client.beta.assistants.retrieve(get_assistant_id_by_name(assistant_name))
-    assistant_id = get_assistant_id_by_name(assistant_name)
-
+    if assistant_name == "moreTestsAssistant":
+        assistant_id = get_assistant_id_by_name("FirstAssistant")
+    else:
+        assistant_id = get_assistant_id_by_name(assistant_name)
+    print("assistant id: " + assistant_id + "assistant name: " + assistant_name)
     # Run the assistant
     run = client.beta.threads.runs.create(
         thread_id=thread_id,

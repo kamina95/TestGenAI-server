@@ -72,9 +72,9 @@ def create_assistant(instruction_file_path, name):
     return assistant
 
 
-assistant = create_assistant("assistant_instructions/OpenAI_Assistant_Test_Creation_Guidelines.md", "FirstAssistant")
-# assistant = create_assistant("assistant_instructions/Fixed_OpenAI_Assistant_Error_Analysis_Guidelines.md",
-#                              "RetryAssistant")
+# assistant = create_assistant("assistant_instructions/OpenAI_Assistant_Test_Creation_Guidelines.md", "FirstAssistant")
+assistant = create_assistant("assistant_instructions/Fixed_OpenAI_Assistant_Error_Analysis_Guidelines.md",
+                             "RetryAssistant")
 #
 # assistant_id = get_assistant_id_by_name("FirstAssistant")
 # print("Assistant ID:", assistant_id)

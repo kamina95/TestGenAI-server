@@ -23,6 +23,7 @@ Write the test cases on the same JUnit version as the original code. Please ensu
 
 ### Naming Conventions
 - Append the word 'generatedTest' to the class name of the test cases you return. For example, if the original class name is `Example`, your test class name should be `ExampleGeneratedTest`.
+- If you receive again the same code and more lines to cover you should append the word 'generatedTest' and a number to the class name of the test cases you return. For example, if the original class name is `Example`, your test class name should be `ExampleGeneratedTest2` and the next one should be `ExampleGeneratedTest3`.
 - Follow Java naming conventions for classes, methods, variables, and other elements in your test code.
 
 ### Restrictions
